@@ -1,0 +1,22 @@
+{
+  "code": 200,
+  "msg": "transfer mock SUCCESS",
+  "systemTime": 1579155266288,
+  "data": {
+    "total": 1,
+    "transferRecordRspList": [
+      {
+        "payno": "CZ202001160000001161",
+        "merchantPayNo": "CZ2019112800000026971",
+        "playerId": "693ce09e7e04724d275cd2ed1891350c",
+        "playerName": "haha",
+        "payGold": "100.0",
+        "currency": "RMB",
+        "payWay": "1",
+        "gold": "100.00",
+        "transferRemark": "充值",
+        "createTime": 1579141347947
+      }
+    ]
+  }
+}

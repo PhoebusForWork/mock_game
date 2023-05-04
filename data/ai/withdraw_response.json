@@ -1,0 +1,31 @@
+{
+  "code": 200,
+  "msg": "withdraw mock SUCCESS",
+  "systemTime": 1622476087274,
+  "data": [
+    {
+      "gold": "105251.8800",
+      "payGold": "-100",
+      "merchantPayNo": "daoqu005",
+      "tradeStatus": 1,
+      "businessId": "daoqu005",
+      "tradeDate": "2021-07-03 20:00:53",
+      "tradeNo": "C0602X202107030000007993",
+      "tradeRemark": "交易成功!",
+      "tradeCode": 500002,
+      "walletType": "1"
+    },
+    {
+      "gold": "99388.6100",
+      "payGold": "-100",
+      "merchantPayNo": "daoqu005",
+      "tradeStatus": 1,
+      "businessId": "daoqu005",
+      "tradeDate": "2021-07-03 20:00:53",
+      "tradeNo": "C0602X202107030000008881",
+      "tradeRemark": "交易成功!",
+      "tradeCode": 500002,
+      "walletType": "2"
+    }
+  ]
+}

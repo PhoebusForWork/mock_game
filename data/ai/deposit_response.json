@@ -1,0 +1,31 @@
+{
+  "code": 200,
+  "msg": "deposit mock SUCCESS",
+  "systemTime": 1622476791156,
+  "data": [
+    {
+      "gold": "99.9900",
+      "payGold": "99.99",
+      "merchantPayNo": "CZ2019dd1280000002697",
+      "tradeStatus": 1,
+      "businessId": "CZ2019dd1280000002697",
+      "tradeDate": "2021-05-31 23:59:50",
+      "tradeNo": "C0601X202105310000193290",
+      "tradeRemark": "交易成功!",
+      "tradeCode": 500002,
+      "walletType": "1"
+    },
+    {
+      "gold": "99.9900",
+      "payGold": "99.99",
+      "merchantPayNo": "CZ2019dd1280000002697",
+      "tradeStatus": 1,
+      "businessId": "CZ2019dd1280000002697",
+      "tradeDate": "2021-05-31 23:59:50",
+      "tradeNo": "C0601X202105310000193290",
+      "tradeRemark": "交易成功!",
+      "tradeCode": 500002,
+      "walletType": "2"
+    }
+  ]
+}

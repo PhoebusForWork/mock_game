@@ -1,6 +1,6 @@
 {
   "code": 200,
-  "msg": "SUCCESS",
+  "msg": "login mock SUCCESS",
   "systemTime": 1625642964351,
   "data": {
     "token": "begerge1db65679e3dfccc53c",

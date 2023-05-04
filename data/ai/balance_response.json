@@ -1,0 +1,10 @@
+{
+  "code": 200,
+  "msg": "balance mock SUCCESS",
+  "systemTime": 1625388412733,
+  "data": {
+    "USDT": "1000.0000",
+    "freezeAmount": "0.0000",
+    "realBalance": "1234.5678"
+  }
+}
