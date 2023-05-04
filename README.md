@@ -1,12 +1,12 @@
 ## LD 3.0 假三方遊戲
 
 #### 環境需求
-``` python
+```
 python 3.9.x
 ```
 
 #### 啟動方式
-``` python
+```
 1、安裝相應的python套件
 pip install -r requirements.txt
 2、啟動mock service
@@ -14,7 +14,7 @@ python main.py
 ```
 
 #### 使用說明
-``` python
+```
 目前提供的API，皆使用POST method：
 {host}/order	撈注單
 {host}/balance	查詢用戶餘額
