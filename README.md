@@ -16,11 +16,11 @@ python main.py
 #### 使用說明
 ```
 目前提供的API，皆使用POST method：
-{host}/order	撈注單
-{host}/balance	查詢用戶餘額
-{host}/transfer	查詢轉帳記錄
-{host}/deposit	存款 (存款至三方平台)
-{host}/withdraw	取款 (從三方平台取款)
+{host}/getGameOrderList	        撈注單
+{host}/getTransferOrderList	查詢轉帳記錄
+{host}/getBalance       	查詢用戶餘額
+{host}/deposit          	存款 (存款至三方平台)
+{host}/withdraw	                取款 (從三方平台取款)
 
 url可夾帶的參數說明：
 merchantId: 假三方的商戶ID，預設為1 (1：AI體育)

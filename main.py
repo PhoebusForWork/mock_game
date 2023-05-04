@@ -42,24 +42,7 @@ def set_up_data():
     g.no_specify_merchant = {"code": 400, "msg": "No specify merchant id"}
 
 
-@app.route('/login', methods=['POST'])
-def mock_login():
-    try:
-        param_merchant_id = request.args.get("merchantId", default="1")
-    except Exception:
-        raise
-
-    mock_data = _get_data(merchant_id=param_merchant_id, method="login")
-    if mock_data["code"] == 200:
-        current_time = time.strftime("%Y-%m-%d %H:%M:%S")
-        current_timestamp = int(time.time()*1000)
-        mock_data["data"]["list"][0]["tradeDate"] = current_time
-        mock_data["systemTime"] = current_timestamp
-
-    return jsonify(mock_data)
-
-
-@app.route('/order', methods=['POST'])
+@app.route('/getGameOrderList', methods=['POST'])
 def mock_order():
     try:
         param_merchant_id = request.args.get("merchantId", default="1")
@@ -74,7 +57,7 @@ def mock_order():
     return jsonify(mock_data)
 
 
-@app.route('/transfer', methods=['POST'])
+@app.route('/getTransferOrderList', methods=['POST'])
 def mock_transfer():
     try:
         param_merchant_id = request.args.get("merchantId", default="1")
@@ -89,7 +72,7 @@ def mock_transfer():
     return jsonify(mock_data)
 
 
-@app.route('/balance', methods=['POST'])
+@app.route('/getBalance', methods=['POST'])
 def mock_balance():
     try:
         param_merchant_id = request.args.get("merchantId", default="1")
