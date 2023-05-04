@@ -37,7 +37,7 @@ def index():
 
 
 @app.route('/getGameOrderList/<merchant_id>', methods=['POST'])
-def mock_order(merchant_id=1):
+def mock_order(merchant_id="1"):
     mock_data = _get_response_data(merchant_id=merchant_id, method="order")
     if mock_data["code"] == 200:
         current_timestamp = int(time.time()*1000)
@@ -47,7 +47,7 @@ def mock_order(merchant_id=1):
 
 
 @app.route('/getTransferOrderList/<merchant_id>', methods=['POST'])
-def mock_transfer(merchant_id=1):
+def mock_transfer(merchant_id="1"):
     mock_data = _get_response_data(merchant_id=merchant_id, method="transfer")
     if mock_data["code"] == 200:
         current_timestamp = int(time.time()*1000)
@@ -57,7 +57,7 @@ def mock_transfer(merchant_id=1):
 
 
 @app.route('/getBalance/<merchant_id>', methods=['POST'])
-def mock_balance(merchant_id=1):
+def mock_balance(merchant_id="1"):
     mock_data = _get_response_data(merchant_id=merchant_id, method="balance")
     if mock_data["code"] == 200:
         current_timestamp = int(time.time()*1000)
@@ -67,7 +67,7 @@ def mock_balance(merchant_id=1):
 
 
 @app.route('/deposit/<merchant_id>', methods=['POST'])
-def mock_deposit(merchant_id=1):
+def mock_deposit(merchant_id="1"):
     mock_data = _get_response_data(merchant_id=merchant_id, method="deposit")
     if mock_data["code"] == 200:
         current_timestamp = int(time.time()*1000)
@@ -77,7 +77,7 @@ def mock_deposit(merchant_id=1):
 
 
 @app.route('/withdraw/<merchant_id>', methods=['POST'])
-def mock_withdraw(merchant_id=1):
+def mock_withdraw(merchant_id="1"):
     mock_data = _get_response_data(merchant_id=merchant_id, method="withdraw")
     if mock_data["code"] == 200:
         current_timestamp = int(time.time()*1000)
