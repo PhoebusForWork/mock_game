@@ -1,0 +1,113 @@
+{
+  "code": 200,
+  "msg": "SUCCESS",
+  "systemTime": 1638694418070,
+  "data": {
+    "result": {
+      "code": 200,
+      "msg": "SUCCESS",
+      "systemTime": 1638694418010,
+      "data": {
+        "totalCount": 156,
+        "orderDTO": [
+          {
+            "merId": "038f3e1d118e41c9a248f045701a37b4",
+            "merName": "前端使用的商户(别删)",
+            "playerId": "ca2ca23802cb9be4a247c9e3c91a0862",
+            "loginName": "luton1",
+            "playerName": "wilson",
+            "remoteIp": "172.31.60.164",
+            "orderId": "21120509564824760",
+            "parlayNum": "2",
+            "gold": 10,
+            "realGold": 10,
+            "winGold": null,
+            "state": 1,
+            "creditState": 0,
+            "realResultDate": null,
+            "resultDetail": null,
+            "createDate": "2021-12-05 09:56:48",
+            "terminalType": "7",
+            "oddfType": "E",
+            "validAmount": 96,
+            "betDTOList": [
+              {
+                "showType": "FU",
+                "gameType": "FT",
+                "playType": "R",
+                "ratioType": "RH",
+                "gameDate": "2021-12-05",
+                "gameTime": "22:00:00",
+                "awayTeam": null,
+                "homeTeam": null,
+                "leagueName": null,
+                "leagueShortName": null,
+                "score": "",
+                "ioRatio": "1.83",
+                "ratio": "0.5",
+                "resultScore": null,
+                "betItem": "斯佩齐亚 +0.5",
+                "betResultDetail": null,
+                "session": "",
+                "teamSuffix": "",
+                "awayLangTeam": "{\"en-us\":\"US Sassuolo\",\"zh-tw\":\"萨索洛\",\"zh-cn\":\"萨索洛\",\"vi-vn\":\"Sassuolo\",\"th-th\":\"US Sassuolo\"}",
+                "homeLangTeam": "{\"en-us\":\"Spezia Calcio\",\"zh-tw\":\"斯佩齊亞\",\"zh-cn\":\"斯佩齐亚\",\"vi-vn\":\"Spezia Calcio\",\"th-th\":\"Spezia Calcio\"}",
+                "leagueLangName": "{\"en-us\":\"Saudi Arabia Saudi Prof. League\",\"zh-tw\":\"意大利足球甲級聯賽\",\"zh-cn\":\"意大利足球甲級聯賽\",\"vi-vn\":\"\",\"th-th\":\"Serie A\"}",
+                "leagueShortLangName": "{\"en-us\":\"Saudi Prof. League\",\"zh-tw\":\"意甲\",\"zh-cn\":\"意甲\",\"vi-vn\":\"\",\"th-th\":\"Serie A\"}",
+                "betItem1": "Spezia Calcio +0.5",
+                "playNameLang": "{\"en-us\":\"Handicap\",\"zh-tw\":\"让球\",\"zh-cn\":\"让球\",\"vi-vn\":\"Cược chấ\",\"th-th\":\"แฮนดิแคป \"}",
+                "playName": "让球",
+                "betItemLang": "{\"en-us\":\"Spezia Calcio +0.5\",\"zh-tw\":\"斯佩齊亞 +0.5\",\"zh-cn\":\"斯佩齐亚 +0.5\",\"vi-vn\":\"Spezia Calcio +0.5\",\"th-th\":\"Spezia Calcio +0.5\"}",
+                "gameId": "aaaa"
+              },
+              {
+                "showType": "FU",
+                "gameType": "FT",
+                "playType": "R",
+                "ratioType": "RH",
+                "gameDate": "2021-12-06",
+                "gameTime": "03:45:00",
+                "awayTeam": null,
+                "homeTeam": null,
+                "leagueName": null,
+                "leagueShortName": null,
+                "score": "",
+                "ioRatio": "1.89",
+                "ratio": "1.75",
+                "resultScore": null,
+                "betItem": "尤文图斯 -1.5/2",
+                "betResultDetail": null,
+                "session": "",
+                "teamSuffix": "",
+                "awayLangTeam": "{\"en-us\":\"Genoa FC\",\"zh-tw\":\"热那亚\",\"zh-cn\":\"热那亚\",\"vi-vn\":\"Genoa\",\"th-th\":\"Genoa FC\"}",
+                "homeLangTeam": "{\"en-us\":\"Juventus Turin\",\"zh-tw\":\"尤文\",\"zh-cn\":\"尤文图斯\",\"vi-vn\":\"Juventus\",\"th-th\":\"Juventus\"}",
+                "leagueLangName": "{\"en-us\":\"Saudi Arabia Saudi Prof. League\",\"zh-tw\":\"意大利足球甲級聯賽\",\"zh-cn\":\"意大利足球甲級聯賽\",\"vi-vn\":\"\",\"th-th\":\"Serie A\"}",
+                "leagueShortLangName": "{\"en-us\":\"Saudi Prof. League\",\"zh-tw\":\"意甲\",\"zh-cn\":\"意甲\",\"vi-vn\":\"\",\"th-th\":\"Serie A\"}",
+                "betItem1": "Juventus Turin -1.5/2",
+                "playNameLang": "{\"en-us\":\"Handicap\",\"zh-tw\":\"让球\",\"zh-cn\":\"让球\",\"vi-vn\":\"Cược chấ\",\"th-th\":\"แฮนดิแคป \"}",
+                "playName": "让球",
+                "betItemLang": "{\"en-us\":\"Juventus Turin -1.5/2\",\"zh-tw\":\"尤文 -1.5/2\",\"zh-cn\":\"尤文图斯 -1.5/2\",\"vi-vn\":\"Juventus -1.5/2\",\"th-th\":\"Juventus -1.5/2\"}",
+                "gameId": "aaaa"
+              }
+            ],
+            "lineType": "1",
+            "cashoutType": "0",
+            "cashouts": {
+              "cashoutId": null,
+              "stake": null,
+              "initGold": null,
+              "returnAmount": null,
+              "wlAmount": null,
+              "placeDateTime": null,
+              "state": null
+            },
+            "betNum": 1,
+            "lang": "zh-cn",
+            "walletId": 1
+          }
+        ]
+      }
+    },
+    "data": "4DE122E6362FB9DCE769715CC1D52E5EA9B08E7AC2FA346F873FBAA851B645B317F22EDE8689D7451A24EB5F9EBC6FEC303500CC5DF7162B1BA43547DB20260450C36564A5C5C1DECC350A365CE5A3616A60DF10D4A1E6C5ABE215F19D8695FAFA5748AB3618D3890180C36077FA2444F9D64934C59C0EB9BAE6B141288A4AA6"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "code": 200,
+  "msg": "SUCCESS",
+  "systemTime": 1625642964351,
+  "data": {
+    "token": "begerge1db65679e3dfccc53c",
+    "playerId": "3ff2889e81ergea5849e",
+    "betUrl": "http://gergerg/dataview/bet?theme=100&lang=zh-cn&terType=1&token=gerg9fe2a7d74e1dgdfg79e3dfccc53c",
+    "list": [
+      {
+        "gold": "300.0000",
+        "payGold": 100,
+        "merchantPayNo": "dao0707test003",
+        "tradeStatus": 1,
+        "businessId": "dao0707test003",
+        "tradeDate": "2021-07-07 15:28:37",
+        "tradeRemark": "交易成功!",
+        "tradeCode": 500002,
+        "tradeNo": "C0601X202107070000014541",
+        "walletType": "1"
+      },
+      {
+        "gold": "200.0000",
+        "payGold": 100,
+        "merchantPayNo": "dao0707test003",
+        "tradeStatus": 1,
+        "businessId": "dao0707test003",
+        "tradeDate": "2021-07-07 15:28:37",
+        "tradeRemark": "交易成功!",
+        "tradeCode": 500002,
+        "tradeNo": "C0601X202107070000014541",
+        "walletType": "2"
+      }
+    ]
+  }
+}
