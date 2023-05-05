@@ -1,0 +1,8 @@
+variables:
+  IMAGE_PATH: qa-app
+  IMAGE_NAME: ${CI_PROJECT_NAME}
+
+include:
+  project: bbc/devops/gitlab-pipeline/cicd-pipeline
+  ref: master
+  file: 'qa-application.yml'
