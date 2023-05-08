@@ -6,4 +6,4 @@ RUN pip3 install -r /app/requirements.txt
 RUN useradd app && \
     chown app:app /app
 USER app
-CMD ["python3", "/app/main.py", "8888"]
+CMD ["python3", "/app/main.py", "8080"]
