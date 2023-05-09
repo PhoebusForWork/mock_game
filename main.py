@@ -42,6 +42,7 @@ def mock_order(merchant_id="1"):
     if mock_data["code"] == 200:
         current_timestamp = int(time.time()*1000)
         mock_data["systemTime"] = current_timestamp
+        mock_data["data"]["orderDTO"][0]["orderId"] = mock_data["data"]["orderDTO"][0]["orderId"] + str(current_timestamp)
 
     return jsonify(mock_data)
 
