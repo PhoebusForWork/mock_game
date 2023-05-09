@@ -4,6 +4,7 @@ import json
 
 
 app = Flask(__name__)
+app.config['previous_request_timestamp'] = 0
 
 
 def _get_response_data(merchant_id, method=''):
@@ -12,7 +13,7 @@ def _get_response_data(merchant_id, method=''):
     else:
         return g.no_specify_merchant
 
-    source = f"app/data/{merchant_name}/{method}_response.json"
+    source = f"data/{merchant_name}/{method}_response.json"
 
     try:
         with open(source, mode='r', encoding='utf8') as f:
@@ -29,6 +30,7 @@ def set_up_data():
     g.greeting = {"code": 200, "msg": "Hello guest"}
     g.no_specify_merchant = {"code": 400, "msg": "No specify merchant id"}
     g.no_specify_method = {"code": 400, "msg": "No specify method"}
+    g.no_data_response_ai = {"code": 200, "msg": "SUCCESS", "systemTime": 1683611637266, "data": {"totalCount": 0, "orderDTO": []}}
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -38,11 +40,15 @@ def index():
 
 @app.route('/getGameOrderList/<merchant_id>', methods=['POST'])
 def mock_order(merchant_id="1"):
-    mock_data = _get_response_data(merchant_id=merchant_id, method="order")
+    current_timestamp = int(time.time() * 1000)
+    if current_timestamp > app.config['previous_request_timestamp'] + 10 * 1000:
+        mock_data = _get_response_data(merchant_id=merchant_id, method="order")
+        app.config['previous_request_timestamp'] = current_timestamp
+    else:
+        mock_data = g.no_data_response_ai
+
     if mock_data["code"] == 200:
-        current_timestamp = int(time.time()*1000)
         mock_data["systemTime"] = current_timestamp
-        mock_data["data"]["orderDTO"][0]["orderId"] = mock_data["data"]["orderDTO"][0]["orderId"] + str(current_timestamp)
 
     return jsonify(mock_data)
 
@@ -51,7 +57,7 @@ def mock_order(merchant_id="1"):
 def mock_transfer(merchant_id="1"):
     mock_data = _get_response_data(merchant_id=merchant_id, method="transfer")
     if mock_data["code"] == 200:
-        current_timestamp = int(time.time()*1000)
+        current_timestamp = int(time.time() * 1000)
         mock_data["systemTime"] = current_timestamp
 
     return jsonify(mock_data)
