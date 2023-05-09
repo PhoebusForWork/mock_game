@@ -13,7 +13,7 @@ def _get_response_data(merchant_id, method=''):
     else:
         return g.no_specify_merchant
 
-    source = f"data/{merchant_name}/{method}_response.json"
+    source = f"app/data/{merchant_name}/{method}_response.json"
 
     try:
         with open(source, mode='r', encoding='utf8') as f:
