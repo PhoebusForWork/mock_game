@@ -1,6 +1,6 @@
 from flask import g, request, jsonify, Flask
 import time
-import json
+import json5
 
 
 app = Flask(__name__)
@@ -13,11 +13,11 @@ def _get_response_data(merchant_id, method=''):
     else:
         return g.no_specify_merchant
 
-    source = f"app/data/{merchant_name}/{method}_response.json"
+    source = f"app/data/{merchant_name}/{method}_response.json5"
 
     try:
         with open(source, mode='r', encoding='utf8') as f:
-            data = json.load(f)
+            data = json5.load(f)
     except Exception:
         raise
 
