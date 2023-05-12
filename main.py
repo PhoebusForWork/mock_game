@@ -1,10 +1,11 @@
 from flask import g, request, jsonify, Flask
 import time
 import json5
-import sys
+import threading
 
 
 app = Flask(__name__)
+lock = threading.Lock()
 app.config['previous_request_timestamp'] = 0
 
 
@@ -41,19 +42,20 @@ def index():
 
 @app.route('/getGameOrderList/<merchant_id>', methods=['POST'])
 def mock_order(merchant_id="1"):
-    current_timestamp = int(time.time() * 1000)
-    print(f"current_timestamp = {current_timestamp}", flush=True)
-    print(f"previous_request_timestamp = {app.config['previous_request_timestamp']}", flush=True)
-    if current_timestamp > app.config['previous_request_timestamp'] + 10 * 1000:
-        mock_data = _get_response_data(merchant_id=merchant_id, method="order")
-        app.config['previous_request_timestamp'] = current_timestamp
-    else:
-        mock_data = g.no_data_response_ai
+    with lock:
+        current_timestamp = int(time.time() * 1000)
+        print(f"current_timestamp = {current_timestamp}", flush=True)
+        print(f"previous_request_timestamp = {app.config['previous_request_timestamp']}", flush=True)
+        if current_timestamp > app.config['previous_request_timestamp'] + 10 * 1000:
+            mock_data = _get_response_data(merchant_id=merchant_id, method="order")
+            app.config['previous_request_timestamp'] = current_timestamp
+        else:
+            mock_data = g.no_data_response_ai
 
-    if mock_data["code"] == 200:
-        mock_data["systemTime"] = current_timestamp
+        if mock_data["code"] == 200:
+            mock_data["systemTime"] = current_timestamp
 
-    return jsonify(mock_data)
+        return jsonify(mock_data)
 
 
 @app.route('/getTransferOrderList/<merchant_id>', methods=['POST'])
