@@ -42,8 +42,8 @@ def index():
 @app.route('/getGameOrderList/<merchant_id>', methods=['POST'])
 def mock_order(merchant_id="1"):
     current_timestamp = int(time.time() * 1000)
-    print(f"current_timestamp = {current_timestamp}", file=sys.stdout)
-    print(f"previous_request_timestamp = {app.config['previous_request_timestamp']}", file=sys.stdout)
+    print(f"current_timestamp = {current_timestamp}", flush=True)
+    print(f"previous_request_timestamp = {app.config['previous_request_timestamp']}", flush=True)
     if current_timestamp > app.config['previous_request_timestamp'] + 10 * 1000:
         mock_data = _get_response_data(merchant_id=merchant_id, method="order")
         app.config['previous_request_timestamp'] = current_timestamp
