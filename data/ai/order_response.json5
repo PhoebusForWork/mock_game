@@ -940,7 +940,7 @@
         "cashoutType": "1",
         "cashouts": {
           "cashoutId": "CO230518_302",
-          "stake": 150,
+          "stake": 50,
           "initGold": 200,
           "returnAmount": 44.44,
           "wlAmount": -5.56,
@@ -1008,7 +1008,7 @@
         "cashoutType": "1",
         "cashouts": {
           "cashoutId": "CO230518_303",
-          "stake": 250,
+          "stake": 50,
           "initGold": 300,
           "returnAmount": 44.44,
           "wlAmount": -5.56,
@@ -1076,7 +1076,7 @@
         "cashoutType": "1",
         "cashouts": {
           "cashoutId": "CO230518_304",
-          "stake": 300,
+          "stake": 100,
           "initGold": 400,
           "returnAmount": 88.88,
           "wlAmount": -11.12,
