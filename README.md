@@ -26,6 +26,11 @@ url參數說明：
 host: 主機所在的host
 merchant_id: 假三方的商戶ID，預設為1 (1：AI體育)
 
+host說明：
+sit環境： https://mock-game-merchant-sit.prj300.xyz/
+qa環境： https://mock-game-merchant-qa.prj300.xyz/
+automation環境： https://mock-game-merchant-automation.prj300.xyz/ (待確認，Billy建置環境中)
+
 curl sample：
 curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8888/getGameOrderList/1
 
