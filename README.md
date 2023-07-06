@@ -32,7 +32,8 @@ qa環境： https://mock-game-merchant-qa.prj300.xyz/
 automation環境： https://mock-game-merchant-automation.prj300.xyz/ (待確認，Billy建置環境中)
 
 curl sample：
-curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8888/getGameOrderList/1
+本地： curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8888/getGameOrderList/1
+qa環境： curl -X POST -H "Content-Type: application/json" https://mock-game-merchant-qa.prj300.xyz/getGameOrderList/1
 
 回傳資料可在以下目錄中設置 (回傳資料格式需符合三方格式，後端服務才能正常解析)：
 /data/{merchant}/*.json
