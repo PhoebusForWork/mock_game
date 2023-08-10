@@ -1,31 +1,13 @@
-from flask import g, request, jsonify, Flask
-import time
-import json5
-import threading
+from flask import Flask, jsonify, g
+from api.game_order import game_order_bp
+from api.transaction import transaction_bp
 
 
 app = Flask(__name__)
-lock = threading.Lock()
 app.config['previous_request_timestamp'] = 0
 
 
-def _get_response_data(merchant_id, method=''):
-    if merchant_id == "1":
-        merchant_name = "ai"
-    else:
-        return g.no_specify_merchant
-
-    source = f"app/data/{merchant_name}/{method}_response.json5"
-
-    try:
-        with open(source, mode='r', encoding='utf8') as f:
-            data = json5.load(f)
-    except Exception:
-        raise
-
-    return data
-
-
+# 設定基礎預設資料
 @app.before_request
 def set_up_data():
     g.key = {"h5AppId": "92d272576dde4a4dc6f9ece81626d641", "appActualKey": "L8IbnjHo8OTu+LBwjQA4dw=="}
@@ -40,63 +22,10 @@ def index():
     return jsonify(g.greeting)
 
 
-@app.route('/getGameOrderList/<merchant_id>', methods=['POST'])
-def mock_order(merchant_id="1"):
-    with lock:
-        current_timestamp = int(time.time() * 1000)
-        print(f"current_timestamp = {current_timestamp}", flush=True)
-        print(f"previous_request_timestamp = {app.config['previous_request_timestamp']}", flush=True)
-        if current_timestamp > app.config['previous_request_timestamp'] + 10 * 1000:
-            mock_data = _get_response_data(merchant_id=merchant_id, method="order")
-            app.config['previous_request_timestamp'] = current_timestamp
-        else:
-            mock_data = g.no_data_response_ai
-
-        if mock_data["code"] == 200:
-            mock_data["systemTime"] = current_timestamp
-
-        return jsonify(mock_data)
-
-
-@app.route('/getTransferOrderList/<merchant_id>', methods=['POST'])
-def mock_transfer(merchant_id="1"):
-    mock_data = _get_response_data(merchant_id=merchant_id, method="transfer")
-    if mock_data["code"] == 200:
-        current_timestamp = int(time.time() * 1000)
-        mock_data["systemTime"] = current_timestamp
-
-    return jsonify(mock_data)
-
-
-@app.route('/getBalance/<merchant_id>', methods=['POST'])
-def mock_balance(merchant_id="1"):
-    mock_data = _get_response_data(merchant_id=merchant_id, method="balance")
-    if mock_data["code"] == 200:
-        current_timestamp = int(time.time()*1000)
-        mock_data["systemTime"] = current_timestamp
-
-    return jsonify(mock_data)
-
-
-@app.route('/deposit/<merchant_id>', methods=['POST'])
-def mock_deposit(merchant_id="1"):
-    mock_data = _get_response_data(merchant_id=merchant_id, method="deposit")
-    if mock_data["code"] == 200:
-        current_timestamp = int(time.time()*1000)
-        mock_data["systemTime"] = current_timestamp
-
-    return jsonify(mock_data)
-
-
-@app.route('/withdraw/<merchant_id>', methods=['POST'])
-def mock_withdraw(merchant_id="1"):
-    mock_data = _get_response_data(merchant_id=merchant_id, method="withdraw")
-    if mock_data["code"] == 200:
-        current_timestamp = int(time.time()*1000)
-        mock_data["systemTime"] = current_timestamp
-
-    return jsonify(mock_data)
-
+# 註冊 API 路由藍圖
+# 遊戲注單相關
+app.register_blueprint(game_order_bp, url_prefix='/api')
+app.register_blueprint(transaction_bp, url_prefix='/api')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
