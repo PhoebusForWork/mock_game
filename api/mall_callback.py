@@ -11,11 +11,11 @@ logging.basicConfig(level=logging.DEBUG)
 def callback():
     # 獲取回調內容
     callback_data = request.json
-
+    status_value = request.args.get('status')
     # 回調日誌
     logging.debug('回調參數: %s', callback_data)
 
     # 返回成功
-    return {"status": "fail"}, 200
+    return {"status": status_value}, 200
 
 
