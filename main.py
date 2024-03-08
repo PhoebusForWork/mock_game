@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, g
 from api.game_order import game_order_bp
 from api.transaction import transaction_bp
+from api.mall_callback import mall_callback_bp
 
 
 app = Flask(__name__)
@@ -26,6 +27,7 @@ def index():
 # 遊戲注單相關
 app.register_blueprint(game_order_bp, url_prefix='/api')
 app.register_blueprint(transaction_bp, url_prefix='/api')
+app.register_blueprint(mall_callback_bp, url_prefix='/api')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
