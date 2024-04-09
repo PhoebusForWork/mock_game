@@ -42,17 +42,20 @@ def getPoint():
 
     # 构造用户信息字典
     user_info = {
-        "username": username,
-        "currentBalance": current_balance,
-        "water": water_amount
+        "code": 1,
+        "message": "SUCCESS",
+        "data": {
+            "username": username,
+            "currentBalance": current_balance
+        }
     }
 
     # 输出回调日志
     logging.debug('回调参数: %s', callback_data)
     logging.debug('查詢基本資訊 %s : %s',username ,user_balances[username])
-
+    logging.debug("回傳",user_info)
     # 返回成功响应
-    return jsonify({"data": user_info}), 200
+    return jsonify(user_info), 200
 
 #紅包回調
 @mall_callback_bp.route('/gl/task/point/exchange/callback', methods=['POST'])
@@ -80,6 +83,7 @@ def exchange_callback():
     logging.debug('調整基本資訊 %s : %s', username, user )
     # 输出回调日志
     logging.debug('回调参数: %s', callback_data)
-
+    status= {"status": "success"}
+    logging.debug("回傳", status)
     # 返回成功响应
-    return jsonify({"status": "success"}), 200
+    return jsonify(status), 200
