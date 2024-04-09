@@ -32,13 +32,12 @@ def getPoint():
     # 从回调数据中提取用户名
     username = callback_data.get('username')
 
-    # 如果用户名不存在于预定义的用户余额字典中，则将其添加到字典中并设置当前余额和水量为100
+    # 如果用户名不存在于预定初始值
     if username not in user_balances:
-        user_balances[username] = {"water": 10, "currentBalance": 11, "P": 12}
+        user_balances[username] = {"water": 10, "currentBalance": 11, "P": 100}
 
-    # 获取用户的当前余额和水量
-    current_balance = user_balances[username]["currentBalance"]
-    water_amount = user_balances[username]["water"]
+    # 获取用户的当前余额
+    p = user_balances[username]["P"]
 
     # 构造用户信息字典
     user_info = {
@@ -46,7 +45,7 @@ def getPoint():
         "message": "SUCCESS",
         "data": {
             "username": username,
-            "currentBalance": current_balance
+            "currentBalance": p
         }
     }
 
@@ -77,8 +76,8 @@ def exchange_callback():
     # 更新用户的当前余额、水量和 P 值
     user = user_balances[username]
     logging.debug('原始基本資訊 %s : %s', username, user )
-    user["currentBalance"] += reward  # 奖励
-    user["water"] += water  # 水量
+    user["currentBalance"] += reward if reward is not None else 0
+    user["water"] += water if water is not None else 0
     user["P"] -= exchange_points  # 兑换积分
     logging.debug('調整基本資訊 %s : %s', username, user )
     # 输出回调日志
