@@ -22,11 +22,11 @@ def mock_order(merchant_id="1"):
         current_timestamp = int(time.time() * 1000)
         print(f"current_timestamp = {current_timestamp}", flush=True)
         print(f"previous_request_timestamp = {current_app.config['previous_request_timestamp']}", flush=True)
-        if current_timestamp > current_app.config['previous_request_timestamp'] + 10 * 1000:
-            mock_data = get_response_data(merchant_id=merchant_id, method=type_result)
-            current_app.config['previous_request_timestamp'] = current_timestamp
-        else:
-            mock_data = g.no_data_response_ai
+        # if current_timestamp > current_app.config['previous_request_timestamp'] + 10 * 1000:
+        mock_data = get_response_data(merchant_id=merchant_id, method=type_result)
+        current_app.config['previous_request_timestamp'] = current_timestamp
+        # else:
+        #     mock_data = g.no_data_response_ai
 
         if mock_data["code"] == 200:
             mock_data["systemTime"] = current_timestamp
