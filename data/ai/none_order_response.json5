@@ -1,0 +1,78 @@
+{
+   "code":200,
+   "msg":"SUCCESS",
+   "systemTime":1712897187610,
+   "data":{
+      "totalCount":1,
+      "orderDTO":[
+         {
+            "merId":"9f7e81c398b5dc3b74d27b3bb116783d",
+            "merName":"AI034LDPROusd",
+            "playerId":"de04ea76f67c28931cae45e67d04b50a",
+            "loginName":"q13",
+            "playerName":"过期的花逝V",
+            "remoteIp":"34.92.215.121",
+            "orderId":null,
+            "parlayNum":"1",
+            "gold":91.95,
+            "realGold":91.95,
+            "winGold":0,
+            "state":3,
+            "creditState":1,
+            "realResultDate":"2024-04-12 12:15:23",
+            "resultDate":"2024-04-12 12:15:23",
+            "resultDetail":null,
+            "createDate":"2024-04-12 10:24:42",
+            "terminalType":"2",
+            "oddfType":"E",
+            "betDTOList":[
+               {
+                  "showType":"FT",
+                  "gameType":"OP_TN",
+                  "playType":"M",
+                  "ratioType":"MC",
+                  "gameDate":"2024-04-12",
+                  "gameTime":"11:25:00",
+                  "awayTeam":"马克西姆·泰斯基",
+                  "homeTeam":"塞尔希·切费尔纳诺夫",
+                  "leagueName":"塞特卡杯",
+                  "leagueShortName":"塞特卡杯",
+                  "score":"",
+                  "ioRatio":"2.48",
+                  "ratio":"",
+                  "resultScore":"3 : 0",
+                  "betItem":"马克西姆·泰斯基",
+                  "betResultDetail":"L",
+                  "session":null,
+                  "teamSuffix":"",
+                  "awayLangTeam":"{\"en-us\":\"Maxim Tytskyi\",\"zh-tw\":\"馬克沁·泰斯基\",\"zh-cn\":\"马克西姆·泰斯基\",\"vi-vn\":\"Maxim Tytskyi\",\"th-th\":\"Maxim Tytskyi\"}",
+                  "homeLangTeam":"{\"en-us\":\"Serhii Chelpanov\",\"zh-tw\":\"塞爾希·切費爾納諾夫\",\"zh-cn\":\"塞尔希·切费尔纳诺夫\",\"vi-vn\":\"Serhii Chelpanov\",\"th-th\":\"Serhii Chelpanov\"}",
+                  "leagueLangName":"{\"en-us\":\"Setka Cup\",\"zh-tw\":\"塞特卡杯\",\"zh-cn\":\"塞特卡杯\",\"vi-vn\":\"Giải Setka Cup\"}",
+                  "leagueShortLangName":"{\"en-us\":\"Setka Cup\",\"zh-tw\":\"塞特卡杯\",\"zh-cn\":\"塞特卡杯\",\"vi-vn\":\"Giải Setka Cup\"}",
+                  "betItem1":"Maxim Tytskyi",
+                  "playNameLang":"{\"en-us\":\"Winner\",\"zh-tw\":\"獨贏盤\",\"zh-cn\":\"独赢盘\",\"vi-vn\":\"Đội chiến thắng\",\"th-th\":\"ผู้ชนะ\"}",
+                  "playName":"独赢盘",
+                  "betItemLang":"{\"en-us\":\"Maxim Tytskyi\",\"zh-tw\":\"馬克沁·泰斯基\",\"zh-cn\":\"马克西姆·泰斯基\",\"vi-vn\":\"Maxim Tytskyi\",\"th-th\":\"Maxim Tytskyi\"}",
+                  "gameId":"5662305663460229121536"
+               }
+            ],
+            "lineType":"1",
+            "cashoutType":"0",
+            "cashouts":{
+               "cashoutId":null,
+               "stake":null,
+               "initGold":null,
+               "returnAmount":null,
+               "wlAmount":null,
+               "placeDateTime":null,
+               "state":null
+            },
+            "betNum":1,
+            "lang":"zh-cn",
+            "walletId":11,
+            "validAmount":91.95
+         }
+      ]
+   },
+   "t":-1
+}
