@@ -29,8 +29,8 @@ def mock_order(merchant_id="1"):
             mock_data = get_response_data(merchant_id=merchant_id, method=type_result)
             current_app.config['previous_request_timestamp'] = current_timestamp
             
-
-        if mock_data["code"] == 200:
+        # 這邊要去看新接的遊戲回傳代碼做判斷調整
+        if mock_data.get("code") == 200 or mock_data.get("status") == 200:
             mock_data["systemTime"] = current_timestamp
 
         return jsonify(mock_data)
