@@ -9,7 +9,8 @@ def get_response_data(merchant_id, method=''):
         "1": "ai",
         "75": "spinix",
         "78": "evo",
-        "2": "jdb"
+        "2": "jdb",
+        "3": "jili"
     }
     # 若不存在則返回錯誤信息
     if merchant_id not in MERCHANT_ID_MAPPING:
