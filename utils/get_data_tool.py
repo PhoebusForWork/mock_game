@@ -16,7 +16,7 @@ def get_response_data(merchant_id, method=''):
 
     merchant_name = MERCHANT_ID_MAPPING[merchant_id]
 
-    source = f"../../data/{merchant_name}/{method}_response.json5"
+    source = f"data/{merchant_name}/{method}_response.json5"
 
     try:
         with open(source, mode='r', encoding='utf8') as f:
