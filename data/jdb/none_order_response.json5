@@ -2,7 +2,7 @@
    "status":"0000",
    "data":[
       {
-         "historyId":"5250409393088",
+         "seqNo":"5250409393088",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -23,7 +23,7 @@
          "afterBalance":"4501.67"
       },
       {
-         "historyId":"5250409393173",
+         "seqNo":"5250409393173",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -44,7 +44,7 @@
          "afterBalance":"4501.42"
       },
       {
-         "historyId":"5250409393189",
+         "seqNo":"5250409393189",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -65,7 +65,7 @@
          "afterBalance":"4501.17"
       },
       {
-         "historyId":"5250409393244",
+         "seqNo":"5250409393244",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -86,7 +86,7 @@
          "afterBalance":"4501.42"
       },
       {
-         "historyId":"5250409393295",
+         "seqNo":"5250409393295",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -107,7 +107,7 @@
          "afterBalance":"4501.17"
       },
       {
-         "historyId":"5250409393357",
+         "seqNo":"5250409393357",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -128,7 +128,7 @@
          "afterBalance":"4501.42"
       },
       {
-         "historyId":"5250409393394",
+         "seqNo":"5250409393394",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -149,7 +149,7 @@
          "afterBalance":"4501.17"
       },
       {
-         "historyId":"5250409393411",
+         "seqNo":"5250409393411",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -170,7 +170,7 @@
          "afterBalance":"4500.92"
       },
       {
-         "historyId":"5250409393431",
+         "seqNo":"5250409393431",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -191,7 +191,7 @@
          "afterBalance":"4500.67"
       },
       {
-         "historyId":"5250409393552",
+         "seqNo":"5250409393552",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -212,7 +212,7 @@
          "afterBalance":"4500.42"
       },
       {
-         "historyId":"5250409393572",
+         "seqNo":"5250409393572",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -233,7 +233,7 @@
          "afterBalance":"4500.17"
       },
       {
-         "historyId":"5250409393586",
+         "seqNo":"5250409393586",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -254,7 +254,7 @@
          "afterBalance":"4499.92"
       },
       {
-         "historyId":"5250409393602",
+         "seqNo":"5250409393602",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -275,7 +275,7 @@
          "afterBalance":"4499.67"
       },
       {
-         "historyId":"5250409393619",
+         "seqNo":"5250409393619",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -296,7 +296,7 @@
          "afterBalance":"4501.92"
       },
       {
-         "historyId":"5250409393772",
+         "seqNo":"5250409393772",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -317,7 +317,7 @@
          "afterBalance":"4504.17"
       },
       {
-         "historyId":"5250409393845",
+         "seqNo":"5250409393845",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -338,7 +338,7 @@
          "afterBalance":"4503.92"
       },
       {
-         "historyId":"5250409393860",
+         "seqNo":"5250409393860",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -359,7 +359,7 @@
          "afterBalance":"4503.67"
       },
       {
-         "historyId":"5250409393876",
+         "seqNo":"5250409393876",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -380,7 +380,7 @@
          "afterBalance":"4503.42"
       },
       {
-         "historyId":"5250409393894",
+         "seqNo":"5250409393894",
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
