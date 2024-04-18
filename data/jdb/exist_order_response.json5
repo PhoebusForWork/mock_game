@@ -2,7 +2,7 @@
    "status":"0000",
    "data":[
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -23,7 +23,7 @@
          "afterBalance":"4501.67"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -44,7 +44,7 @@
          "afterBalance":"4501.42"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -65,7 +65,7 @@
          "afterBalance":"4501.17"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -86,7 +86,7 @@
          "afterBalance":"4501.42"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -107,7 +107,7 @@
          "afterBalance":"4501.17"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -128,7 +128,7 @@
          "afterBalance":"4501.42"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -149,7 +149,7 @@
          "afterBalance":"4501.17"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -170,7 +170,7 @@
          "afterBalance":"4500.92"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -191,7 +191,7 @@
          "afterBalance":"4500.67"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -212,7 +212,7 @@
          "afterBalance":"4500.42"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -233,7 +233,7 @@
          "afterBalance":"4500.17"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -254,7 +254,7 @@
          "afterBalance":"4499.92"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -275,7 +275,7 @@
          "afterBalance":"4499.67"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -296,7 +296,7 @@
          "afterBalance":"4501.92"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -317,7 +317,7 @@
          "afterBalance":"4504.17"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -338,7 +338,7 @@
          "afterBalance":"4503.92"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -359,7 +359,7 @@
          "afterBalance":"4503.67"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
@@ -380,7 +380,7 @@
          "afterBalance":"4503.42"
       },
       {
-         "historyId":null,
+         "seqNo":null,
          "playerId":"ausd2",
          "gType":0,
          "mtype":14042,
