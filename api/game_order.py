@@ -77,8 +77,12 @@ def get_orders(merchant_code="AI"):
     from_time = get_param('from_time', 'StartTime', default_from_time)
     to_time = get_param('to_time', 'EndTime', default_to_time)
     
-    from_time = datetime.datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S')
-    to_time = datetime.datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S')
+    try:
+        from_time = datetime.datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S')
+        to_time = datetime.datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S')
+    except:
+        from_time = datetime.datetime.strptime(from_time, '%Y-%m-%dT%H:%M:%S')
+        to_time = datetime.datetime.strptime(to_time, '%Y-%m-%dT%H:%M:%S')
     
     orders = generate_orders(num_orders, from_time, to_time, merchant_code)
     
