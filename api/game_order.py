@@ -58,7 +58,14 @@ def mock_balance(merchant_id="1"):
 
     return jsonify(mock_data)
 
-@game_order_bp.route('/get_orders/<merchant_code>', methods=['GET'])
+def get_param(param1, param2, default):
+    if request.is_json:
+        param = request.json.get(param1, request.json.get(param2, default))
+    else:
+        param = request.args.get(param1, request.args.get(param2, default))
+    return param
+
+@game_order_bp.route('/get_orders/<merchant_code>', methods=['GET', 'POST'])
 def get_orders(merchant_code="AI"):
     num_orders = int(request.args.get('num_orders', 100))
     
@@ -67,8 +74,8 @@ def get_orders(merchant_code="AI"):
     default_from_time = now.replace(hour=0, minute=0, second=0, microsecond=0).strftime('%Y-%m-%d %H:%M:%S')
     default_to_time = now.replace(hour=23, minute=59, second=59, microsecond=999999).strftime('%Y-%m-%d %H:%M:%S')
     
-    from_time = request.args.get('from_time', default_from_time)
-    to_time = request.args.get('to_time', default_to_time)
+    from_time = get_param('from_time', 'StartTime', default_from_time)
+    to_time = get_param('to_time', 'EndTime', default_to_time)
     
     from_time = datetime.datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S')
     to_time = datetime.datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S')
