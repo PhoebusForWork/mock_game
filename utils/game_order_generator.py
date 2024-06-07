@@ -7,13 +7,16 @@ from concurrent.futures import ThreadPoolExecutor
 
 fake = Faker()
 
+user_names = ['uf88ga2']
 
 def AI_order(from_time, to_time):
     order = {
         "merId": fake.uuid4(),
         "merName": fake.company(),
         "playerId": fake.uuid4(),
-        "loginName": fake.user_name(),
+        # 這邊暫時先用測試帳號代替
+        # "loginName": fake.user_name(),
+        "loginName": random.choice(user_names),
         "playerName": fake.name(),
         "remoteIp": fake.ipv4(),
         "orderId": fake.bothify(text='????????_###'),
@@ -82,7 +85,8 @@ def AI_order(from_time, to_time):
 # 定义 merchant2 的订单生成逻辑
 def JILI_order(from_time, to_time):
     order = {
-        "Account": fake.user_name(),
+        # "Account": fake.user_name(),
+        "Account": random.choice(user_names),
         "WagersId": fake.random_number(digits=18, fix_len=True),
         "GameId": random.randint(1, 100),
         "WagersTime": fake.date_time_between(start_date=from_time, end_date=to_time).isoformat(),
@@ -106,7 +110,8 @@ def generate_default_order(from_time, to_time):
         "merId": fake.uuid4(),
         "merName": fake.company(),
         "playerId": fake.uuid4(),
-        "loginName": fake.user_name(),
+        # "loginName": fake.user_name(),
+        "loginName": random.choice(user_names),
         "playerName": fake.name(),
         "remoteIp": fake.ipv4(),
         "orderId": fake.bothify(text='????????_###'),
