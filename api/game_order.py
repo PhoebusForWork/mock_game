@@ -67,23 +67,35 @@ def get_param(param1, param2, default):
 
 @game_order_bp.route('/get_orders/<merchant_code>', methods=['GET', 'POST'])
 def get_orders(merchant_code="AI"):
-    num_orders = int(request.args.get('num_orders', 100))
-    
-    # 獲取當前日期的開始與結束時間
-    now = datetime.datetime.now()
-    default_from_time = now.replace(hour=0, minute=0, second=0, microsecond=0).strftime('%Y-%m-%d %H:%M:%S')
-    default_to_time = now.replace(hour=23, minute=59, second=59, microsecond=999999).strftime('%Y-%m-%d %H:%M:%S')
-    
-    from_time = get_param('from_time', 'StartTime', default_from_time)
-    to_time = get_param('to_time', 'EndTime', default_to_time)
-    
-    try:
-        from_time = datetime.datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S')
-        to_time = datetime.datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S')
-    except:
-        from_time = datetime.datetime.strptime(from_time, '%Y-%m-%dT%H:%M:%S')
-        to_time = datetime.datetime.strptime(to_time, '%Y-%m-%dT%H:%M:%S')
-    
-    orders = generate_orders(num_orders, from_time, to_time, merchant_code)
-    
-    return jsonify(orders)
+    with lock:
+        current_timestamp = int(time.time() * 1000)
+        print(f"current_timestamp = {current_timestamp}", flush=True)
+        print(f"previous_request_timestamp = {current_app.config['previous_request_timestamp']}", flush=True)
+
+        num_orders = int(request.args.get('num_orders', 100))
+        
+        # 獲取當前日期的開始與結束時間
+        now = datetime.datetime.now()
+        default_from_time = now.replace(hour=0, minute=0, second=0, microsecond=0).strftime('%Y-%m-%d %H:%M:%S')
+        default_to_time = now.replace(hour=23, minute=59, second=59, microsecond=999999).strftime('%Y-%m-%d %H:%M:%S')
+        
+        from_time = get_param('from_time', 'StartTime', default_from_time)
+        to_time = get_param('to_time', 'EndTime', default_to_time)
+        
+        try:
+            from_time = datetime.datetime.strptime(from_time, '%Y-%m-%d %H:%M:%S')
+            to_time = datetime.datetime.strptime(to_time, '%Y-%m-%d %H:%M:%S')
+        except:
+            from_time = datetime.datetime.strptime(from_time, '%Y-%m-%dT%H:%M:%S')
+            to_time = datetime.datetime.strptime(to_time, '%Y-%m-%dT%H:%M:%S')
+        
+        # 判斷是否重複請求
+        none_order = 0
+        if current_timestamp < current_app.config['previous_request_timestamp'] + 10 * 1000 :
+            orders = generate_orders(none_order, from_time, to_time, merchant_code)
+        else:
+            orders = generate_orders(num_orders, from_time, to_time, merchant_code)
+            current_app.config['previous_request_timestamp'] = current_timestamp
+        
+        
+        return jsonify(orders)
