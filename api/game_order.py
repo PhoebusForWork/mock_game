@@ -70,7 +70,7 @@ def get_orders(merchant_code="AI"):
     with lock:
         current_timestamp = int(time.time() * 1000)
         print(f"current_timestamp = {current_timestamp}", flush=True)
-        print(f"previous_request_timestamp = {current_app.config['previous_request_mock_timestamp']}", flush=True)
+        print(f"previous_request_timestamp = {current_app.config['previous_request_timestamp']}", flush=True)
 
         num_orders = int(request.args.get('num_orders', 100))
         
@@ -91,11 +91,11 @@ def get_orders(merchant_code="AI"):
         
         # 判斷是否重複請求
         none_order = 0
-        if current_timestamp < current_app.config['previous_request_mock_timestamp'] + 10 * 1000 :
+        if current_timestamp < current_app.config['previous_request_timestamp'] + 10 * 1000 :
             orders = generate_orders(none_order, from_time, to_time, merchant_code)
         else:
             orders = generate_orders(num_orders, from_time, to_time, merchant_code)
-            current_app.config['previous_request_mock_timestamp'] = current_timestamp
+            current_app.config['previous_request_timestamp'] = current_timestamp
         
         
         return jsonify(orders)
