@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 fake = Faker()
 
-user_names = ['uf88ga2']
+user_names = [f'uf88ga{i}' for i in range(2, 22+1)]
 
 def AI_order(from_time, to_time):
     order = {
