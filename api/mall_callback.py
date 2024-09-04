@@ -24,7 +24,7 @@ user_balances = {
 }
 
 #用戶點數查詢
-@mall_callback_bp.route('/qry_current_balance', methods=['POST'])
+@mall_callback_bp.route('/gl/task/point/query', methods=['POST'])
 def getPoint():
     # 获取回调内容
     callback_data = request.json
@@ -86,3 +86,16 @@ def exchange_callback():
     logging.debug("回傳", status)
     # 返回成功响应
     return jsonify(status), 200
+
+#取消訂單通知
+@mall_callback_bp.route('/gl/task/point/cancel/order', methods=['POST'])
+def cancel_order():
+    # 獲取回調內容
+    callback_data = request.json
+
+    # 返回成功
+    logging.debug('回調參數: %s', callback_data)
+    status = {"status": "success"}
+    logging.debug("回傳", status)
+    return {"status": status}, 200
+
